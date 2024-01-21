@@ -32,7 +32,7 @@ body {
   display: flex;
   justify-content: space-between;
   background-color: #333333;
-  color: white;
+  
   padding: 20px 10%;
   flex-wrap: wrap;
   align-items: center;
@@ -42,6 +42,7 @@ body {
 }
 .nav-logo {
   font-size: 2rem;
+  color: white;
 
 }
 .logo-text:hover{
@@ -50,11 +51,12 @@ body {
 .nav-bar ul {
   list-style: none;
   display: flex;
+  gap:30px;
 
   justify-content: center;
 }
 .nav-bar ul li {
-  padding: 0 15px;
+  
   text-align: center;
 }
  a{
