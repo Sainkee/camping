@@ -42,10 +42,10 @@ body {
 }
 .nav-logo {
   font-size: 2rem;
-  cursor: pointer;
+
 }
-.nav-logo:hover{
-  color: #e6e6e6;
+.logo-text:hover{
+  color: #e2dddd;
 }
 .nav-bar ul {
   list-style: none;
@@ -57,7 +57,7 @@ body {
   padding: 0 15px;
   text-align: center;
 }
-.nav-bar ul li a{
+ a{
   text-decoration: none;
   cursor: pointer;
   color: white;
