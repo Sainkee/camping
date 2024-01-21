@@ -3,12 +3,14 @@
   margin: 0;
   padding: 0;
 }
-:root {
-  font-size: 16px;
-}
+
 html {
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
+  font-size: calc(14px + 0.3vw);
+}
+body {
+  background-color: #f2f2f2;
 }
 #hero-section {
   background: url(https://koa.com/blog/images/family-camping-at-sunset.jpg?preset=heroimagecropped)
@@ -22,12 +24,9 @@ html {
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(
-    0,
-    0,
-    0,
-    0.288
-  ); /* Adjust the alpha value (0.5) to control the darkness */
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.288);
 }
 .nav-bar {
   display: flex;
@@ -94,7 +93,6 @@ button:hover {
 }
 #service-section {
   padding: 100px;
-  background-color: #f2f2f2;
 }
 .service-title {
   margin-bottom: 100px;
@@ -111,11 +109,12 @@ button:hover {
 .cards div {
   transform: perspective(750px) translate3d(0px, 0px, -250px) rotateX(27deg)
     scale(0.9, 0.9);
-  border-radius: 20px;
+  border-radius: 10px;
   border: 5px solid #e6e6e6;
   box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.2);
   transition: 0.4s ease-in-out transform;
   padding: 20px;
+  background-color: white;
 }
 .cards div:hover {
   transform: translate3d(0px, 0px, -250px);
@@ -136,22 +135,109 @@ img {
   object-fit: cover;
   margin: 10px 0;
 }
+/* about section */
+
+.about-title {
+  text-align: center;
+}
+.about-content,
+#contact-section {
+  padding: 50px 150px;
+}
+.about-content p {
+  padding: 15px 0 30px;
+  font-size: 0.9rem;
+  color: rgba(34, 33, 33, 0.847);
+  font-weight: 400;
+}
+.about-content h5 {
+  font-size: 1.2rem;
+}
+
+.about-content ul {
+  padding-left: 20px;
+  padding-top: 10px;
+  font-size: 0.9rem;
+  color: rgba(34, 33, 33, 0.847);
+  font-weight: 400;
+}
+.about-content ul li {
+  padding: 5px 0;
+}
+
+/* contact-us section */
+
+.contact-title {
+  text-align: center;
+}
+.contact-content {
+  padding: 50px 0;
+  color: #0e0e0e9e;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+}
+
+.text-content {
+  span {
+    padding: 10px 0;
+    font-size: 1rem;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+form * {
+  margin: 10px 0;
+  padding: 10px;
+}
+input,textarea{
+    outline: none;
+}
+
+button[type="submit"] {
+  background-color: black;
+  color: #f2f2f2;
+  width: 150px;
+  border-radius: 4px;
+  border: 2px solid white;
+  &:hover {
+    background-color: #333333;
+    cursor: pointer;
+  }
+}
 
 /* media query */
-@media (max-width: 600px) {
-  :root {
-    font-size: 14px;
-  }
-}
 
-@media (min-width: 601px) and (max-width: 900px) {
-  :root {
-    font-size: 15px;
+@media (max-width: 800px) {
+  #service-section,
+  .about-section,
+  .about-content,
+  #contact-section,.contact-content {
+    padding-left: 20px;
+    padding-right: 20px;
   }
-}
+  .hero-content p {
+    width: 100%;
+  }
+  .contact-content{
+  align-items: unset;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
 
-@media (min-width: 901px) {
-  :root {
-    font-size: 16px;
+
   }
+  .hero-content h1 {
+    font-size: calc(1.5rem + 1vw);
+  }
+
+  .contact-title,.text-content{
+    margin-bottom: 20px;
+  }
+
+  
 }
